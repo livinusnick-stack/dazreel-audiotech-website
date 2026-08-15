@@ -1,1 +1,10 @@
-const menu=document.querySelector('.menu'),nav=document.querySelector('.nav nav');if(menu)menu.onclick=()=>nav.classList.toggle('open');document.querySelectorAll('.nav nav a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));document.getElementById('year').textContent=new Date().getFullYear();document.getElementById('quote').onsubmit=e=>{e.preventDefault();const d=new FormData(e.target);const msg=`Hello Dazreel Audiotech, I would like to request a quote.%0A%0AName: ${encodeURIComponent(d.get('name'))}%0APhone: ${encodeURIComponent(d.get('phone'))}%0AService: ${encodeURIComponent(d.get('service'))}%0AProject: ${encodeURIComponent(d.get('message'))}`;window.open(`https://wa.me/2348068497170?text=${msg}`,'_blank');document.getElementById('note').textContent='Your WhatsApp enquiry is ready. Please send it in the WhatsApp window.';}
+document.addEventListener('DOMContentLoaded', () => {
+  // Maya trigger interaction placeholder
+  const mayaButtons = document.querySelectorAll('#mayaTrigger, .maya-card');
+
+  mayaButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      alert("Initializing Maya Voice Assistant... (Vapi connection pending)");
+    });
+  });
+});
