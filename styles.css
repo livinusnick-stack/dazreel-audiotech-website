@@ -55,12 +55,13 @@ body { background-color: var(--bg-dark); color: var(--text-main); font-family: '
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 .btn-cyber {
   padding: 0.8rem 1.6rem; border-radius: 8px; font-family: 'Orbitron', sans-serif; font-size: 0.85rem; font-weight: 700;
-  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.03);
+  text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.15); color: #fff; cursor: pointer; transition: 0.3s;
 }
 .btn-cyber.green:hover { border-color: var(--neon-green); color: var(--neon-green); box-shadow: 0 0 20px rgba(0, 255, 102, 0.3); }
 .btn-cyber.cyan:hover { border-color: var(--neon-cyan); color: var(--neon-cyan); box-shadow: 0 0 20px rgba(0, 243, 255, 0.3); }
 .btn-cyber.purple:hover { border-color: var(--neon-magenta); color: var(--neon-magenta); box-shadow: 0 0 20px rgba(255, 0, 85, 0.3); }
+.btn-cyber.full-width { width: 100%; margin-top: 1.5rem; }
 
 /* Rack Graphic */
 .rack-unit {
@@ -84,8 +85,7 @@ body { background-color: var(--bg-dark); color: var(--text-main); font-family: '
 @keyframes eqAnim { 0% { height: 20%; } 100% { height: 100%; } }
 
 /* Section Common Styling */
-.services-section, .gear-section, .contact-section { padding: 5rem 8%; text-align: center; }
-.gear-section.dark-alt { background: rgba(0,0,0,0.4); }
+.services-section, .gear-section, .academy-section, .contact-section { padding: 5rem 8%; text-align: center; }
 .section-title { font-family: 'Orbitron', sans-serif; font-size: 2.2rem; margin-bottom: 3rem; }
 .section-title span { color: var(--neon-cyan); }
 
@@ -101,14 +101,21 @@ body { background-color: var(--bg-dark); color: var(--text-main); font-family: '
 .gear-card:hover { transform: translateY(-6px); border-color: var(--neon-cyan); }
 .gear-card img { width: 100%; height: 220px; object-fit: cover; }
 .gear-info { padding: 1.5rem; }
-
-.gear-tag {
-  display: inline-block; padding: 0.2rem 0.6rem; background: rgba(255, 183, 0, 0.15); color: var(--neon-gold);
-  border: 1px solid var(--neon-gold); border-radius: 4px; font-family: 'Orbitron', sans-serif; font-size: 0.65rem; margin-bottom: 0.8rem;
-}
-
+.gear-tag { display: inline-block; padding: 0.2rem 0.6rem; background: rgba(255, 183, 0, 0.15); color: var(--neon-gold); border: 1px solid var(--neon-gold); border-radius: 4px; font-family: 'Orbitron', sans-serif; font-size: 0.65rem; margin-bottom: 0.8rem; }
 .gear-info h3 { font-family: 'Orbitron', sans-serif; font-size: 1.15rem; margin-bottom: 0.5rem; color: #fff; }
 .gear-info p { color: var(--text-dim); font-size: 0.95rem; }
+
+/* Academy & Internship Cards */
+.academy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+.academy-card { background: var(--panel-bg); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 2.5rem 2rem; text-align: left; transition: 0.3s; }
+.academy-card.highlight { border-color: var(--neon-cyan); box-shadow: 0 0 25px rgba(0, 243, 255, 0.15); }
+.academy-icon { font-size: 2.5rem; color: var(--neon-gold); margin-bottom: 1.2rem; }
+.academy-card h3 { font-family: 'Orbitron', sans-serif; font-size: 1.3rem; margin-bottom: 1rem; color: #fff; }
+.academy-card p { color: var(--text-dim); font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.5; }
+
+.academy-list { list-style: none; }
+.academy-list li { margin-bottom: 0.8rem; font-size: 0.95rem; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
+.academy-list li i { color: var(--neon-green); font-size: 0.9rem; }
 
 /* Contact Cyber Cards */
 .cyber-card { background: var(--panel-bg); padding: 2.5rem 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); text-decoration: none; color: #fff; display: flex; flex-direction: column; align-items: center; transition: 0.3s; }
